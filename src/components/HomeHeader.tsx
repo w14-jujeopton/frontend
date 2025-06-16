@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-
+import FrameLayout from "./FrameLayout";
 
 const HomeHeader = () => (
 <Box
@@ -16,6 +16,7 @@ const HomeHeader = () => (
     py={2}
     px={3}
 >
+    <FrameLayout>
     <span style={{ display: "flex", alignItems: "center", marginRight: 16 }}>
         <a href="/">
             Jung/e Board
@@ -24,6 +25,7 @@ const HomeHeader = () => (
     <Typography variant="h5" component="div">
         Home
     </Typography>
+    </FrameLayout>
 </Box>
 );
 

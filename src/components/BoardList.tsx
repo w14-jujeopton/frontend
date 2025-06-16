@@ -57,7 +57,7 @@ const BoardList = () => {
     if (loading) return <CircularProgress sx={{ mt: 4 }} />;
     if (error) return <Alert severity='error'>{error}</Alert>
     return (
-        <Grid container spacing={3} sx={{ p: 3, mt: 4}}>
+        <Grid container spacing={3} sx={{ p: 3, mt: 10, mb: 4}}>
             {users.map((user) => (
                 <Grid item xs={12} sm={6} md={4} key={user.username}>
                     <Card variant="outlined">
