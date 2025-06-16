@@ -34,23 +34,37 @@ const BoardList = () => {
     // }, []);
 
     useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await axios.get<User[]>('http://goochul.iptime.org:4000/user');
+                console.log(response.data)
+                setUsers(response.data);
+            } catch (err) {
+                setError('데이터를 불러오는데 실패헀습니다.');
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchUsers();
+
         // 개발용 더미 데이터
-        setUsers([
-            { nickname: '철수', username: 'chulsoo' },
-            { nickname: '영희', username: 'younghee' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' },
-            { nickname: '민수', username: 'minsoo' }
-        ]);
+
+        // setUsers([
+        //     { nickname: '철수', username: 'chulsoo' },
+        //     { nickname: '영희', username: 'younghee' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' },
+        //     { nickname: '민수', username: 'minsoo' }
+        // ]);
         setLoading(false);
     }, []);
 
