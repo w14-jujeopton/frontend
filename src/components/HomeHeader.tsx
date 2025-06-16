@@ -1,0 +1,29 @@
+import { Box, Typography } from "@mui/material";
+
+const HomeHeader = () => (
+<Box
+    position="fixed"
+    top={0}
+    left={0}
+    width="100%"
+    zIndex={1100}
+    display="flex"
+    alignItems="center"
+    justifyContent="flex-start"
+    bgcolor="background.paper"
+    boxShadow={1}
+    py={2}
+    px={3}
+>
+    <span style={{ display: "flex", alignItems: "center", marginRight: 16 }}>
+        <a>
+            LOGO
+        </a>
+    </span>
+    <Typography variant="h5" component="div">
+        Home
+    </Typography>
+</Box>
+);
+
+export default HomeHeader;
