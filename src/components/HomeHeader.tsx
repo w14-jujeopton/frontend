@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
+
 const HomeHeader = () => (
 <Box
     position="fixed"
@@ -16,8 +17,8 @@ const HomeHeader = () => (
     px={3}
 >
     <span style={{ display: "flex", alignItems: "center", marginRight: 16 }}>
-        <a>
-            LOGO
+        <a href="/">
+            Jung/e Board
         </a>
     </span>
     <Typography variant="h5" component="div">

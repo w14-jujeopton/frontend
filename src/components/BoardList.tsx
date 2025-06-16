@@ -38,6 +38,17 @@ const BoardList = () => {
         setUsers([
             { nickname: '철수', username: 'chulsoo' },
             { nickname: '영희', username: 'younghee' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
+            { nickname: '민수', username: 'minsoo' },
             { nickname: '민수', username: 'minsoo' }
         ]);
         setLoading(false);
@@ -46,7 +57,7 @@ const BoardList = () => {
     if (loading) return <CircularProgress sx={{ mt: 4 }} />;
     if (error) return <Alert severity='error'>{error}</Alert>
     return (
-        <Grid container spacing={3} sx={{ p: 3 }}>
+        <Grid container spacing={3} sx={{ p: 3, mt: 4}}>
             {users.map((user) => (
                 <Grid item xs={12} sm={6} md={4} key={user.username}>
                     <Card variant="outlined">
