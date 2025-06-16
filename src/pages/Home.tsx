@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Typography, Box, CircularProgress } from "@mui/material"
-import Masonry from '@mui/lab/Masonry';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import BottomNav from "../components/BottomNav";
+import PostMasonry from "../components/PostMasonry";
 
 
 const Home = () => {
@@ -30,16 +28,8 @@ const Home = () => {
         </Box>
 
         <Container maxWidth="md">
-            <Masonry columns={3} spacing={2}>
-                <Card variant="outlined">
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary">
-                            Welcome to the Home page!
-                        </Typography>
-                    </CardContent>
-                </Card>
-                {/* 추가 카드가 있다면 여기에 계속 Card 컴포넌트를 추가하면 됩니다 */}
-            </Masonry>
+            {/* 포스트 레이아웃 분리: PostMasonry 컴포넌트 사용 */}
+            <PostMasonry />
         </Container>
         
         <BottomNav />
