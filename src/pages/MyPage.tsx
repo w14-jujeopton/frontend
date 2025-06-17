@@ -24,24 +24,49 @@ export default function MyPage() {
 
         <FrameLayout>
             <HomeHeader />
-            <Tabs
-                value={tab}
-                onChange={handleChange}
-                centered
+            <Box
                 sx={{
-                    backgroundColor: 'white',
-                    borderRadius: 2,
-                    boxShadow: 1,
-                    width: '100%',
-                    maxWidth: '100%',
+                    position: 'fixed',
+                    top: '30%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 10,
+                    width: '90%',
+                    maxWidth: 400,
                 }}
             >
-                {menu.map((item) => (
-                    <Tab key={item.value} label={item.label} />
-                ))}
-            </Tabs>
+                <Tabs
+                    value={tab}
+                    onChange={handleChange}
+                    centered
+                    sx={{
+                        backgroundColor: 'white',
+                        borderRadius: 2,
+                        boxShadow: 1,
+                        width: '100%',
+                        maxWidth: '100%',
+                    }}
+                >
+                    {menu.map((item) => (
+                        <Tab key={item.value} label={item.label} />
+                    ))}
+                </Tabs>
+            </Box>
+            
+
             {/* 아래 영역에 각 컴포넌트 렌더링 */}
-            <Box sx={{ mt: 2 }}>
+            <Box
+                sx={{
+                    position: 'fixed',
+                    top: 'calc(30% + 48px)', // 48px is the default Tabs height
+                    left: '50%',
+                    transform: 'translate(-50%, 0)',
+                    zIndex: 9,
+                    width: '90%',
+                    maxWidth: 400,
+                    mt: 0,
+                }}
+            >
                 {tab === 0 && <MyPosts />}
                 {tab === 1 && <MyComments />}
                 {tab === 2 && <MyInfo />}

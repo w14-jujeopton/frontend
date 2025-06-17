@@ -22,9 +22,6 @@ const HomeHeader = () => (
             Jung/e Board
         </a>
     </span>
-    <Typography variant="h5" component="div">
-        Home
-    </Typography>
     </FrameLayout>
 </Box>
 );
