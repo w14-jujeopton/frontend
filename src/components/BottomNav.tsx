@@ -11,6 +11,7 @@ const BottomNav = () => (
         bottom={0}
         left={0}
         width="100%"
+        height="56px"
         bgcolor="background.paper"
         boxShadow={3}
         zIndex={1300}

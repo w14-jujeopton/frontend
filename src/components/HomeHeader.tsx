@@ -13,6 +13,7 @@ const HomeHeader = () => (
     justifyContent="flex-start"
     bgcolor="background.paper"
     boxShadow={1}
+    height="46px"
     py={2}
     px={3}
 >
