@@ -69,7 +69,7 @@ const MyPosts = () => {
                 // 탭 시작 위치: 30vh
                 // 탭 사이즈: 48px
                 // bottom nav 높이: 56px
-                height: 'calc(100vh - 30vh - 56px - 48px)',
+                height: 'calc(100vh - 30vh - 56px - 48px - 20vh)',
             }}>
             <Grid container direction="column" spacing={3} sx={{ p: 0, mt: 0, mb: 4 }}>
                 {posts.map((post) => (
