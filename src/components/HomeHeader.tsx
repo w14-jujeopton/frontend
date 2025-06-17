@@ -23,7 +23,7 @@ const HomeHeader = () => (
         </a>
     </span>
     <Typography variant="h5" component="div">
-        Home
+        {/* Home */}
     </Typography>
     </FrameLayout>
 </Box>
